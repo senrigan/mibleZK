@@ -1,0 +1,27 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new page title" border="normal">
+	<hbox>
+		<button label="View mib List"></button>
+		<button label="consult oid"></button>
+	</hbox>
+	<listbox >
+		<listhead>
+			<listheader label="Name mib" sort="auto" />
+			
+		</listhead>
+		<listitem>
+			<listcell label="" />
+			<listcell label="" />
+		</listitem>
+		<listitem>
+			<listcell label="" />
+			<listcell label="" />
+		</listitem>
+	</listbox>
+	<label>oid</label>
+	<textbox />
+	<button label="consult"></button>
+
+</window>
+</zk>

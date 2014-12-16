@@ -1,0 +1,48 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="importar device Controller" border="normal">
+<div>
+	<fileupload label="Device"/><textbox />
+	
+</div>
+<div>
+<listbox >
+	<listhead>
+		
+		<listheader label="Marca " sort="auto" />
+		<listheader label="Modelo" sort="auto" />
+		<listheader label="SysoID" sort="auto" />
+	</listhead>
+	<listitem>
+	
+		
+		<listcell label="cisco" />
+		<listcell label="1800" />
+		<listcell label="1.3.5.548" />
+	</listitem>
+	<listitem>
+		
+		<listcell label="3com" />
+		<listcell label="37fc" />
+		<listcell label="1.5.7.8.6" />
+	</listitem>
+</listbox>
+</div>
+<div>
+<label>ODI</label>
+<listbox >
+	<listhead>
+		<listheader label="" sort="auto" />
+	</listhead>
+	<listitem>
+		<listcell label="Syste.dasda" />
+	</listitem>
+	<listitem>
+		<listcell label="Etho.dasd" />
+	</listitem>
+</listbox>
+
+</div>
+
+</window>
+</zk>

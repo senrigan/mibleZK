@@ -1,0 +1,36 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new page title" border="normal">
+
+	<vbox>
+		<hbox>
+			<label >ip</label>
+			<textbox />
+			<label >version snmp</label>
+			<listbox mold="select" hflex="1">
+		                        <listitem label="V1" />
+		                        <listitem label="V2" />
+		                        <listitem label="V3" selected="true"/>
+		     </listbox>
+		     <label >comunidad</label>
+			<listbox mold="select" hflex="1">
+		                        <listitem label="publica" />
+		                        <listitem label="privada" />
+		                        <listitem label="otra" selected="true"/>
+		     </listbox>
+		     <label >User</label>
+		   <textbox></textbox>
+			
+		</hbox>
+		<div>
+			<button label="Next" onClick="" style="float:right"/>
+			<button label="Back" onClick="" style="float:right"/>
+			<button label="Cancel" onClick="" style="float:right"/>
+			
+		</div>
+			
+		
+	</vbox>
+
+</window>
+</zk>

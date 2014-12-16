@@ -1,0 +1,50 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new Device Controller"border="normal">
+	<div>
+		<vbox hflex="1">
+		<div>
+		<label>Marca</label>
+			<listbox mold="select" hflex="1">
+	                        <listitem label="Cisco" />
+	                        <listitem label="Hawei" />
+	                        <listitem label="3Com" selected="true"/>
+	                        <listitem label="linksis" />
+	                        <listitem label="otra marca" />
+	        </listbox>
+		</div>
+			
+	        <textbox />
+		</vbox>
+		
+	</div>
+	<!-- 
+		
+			<div>
+		
+		<vbox hflex="1">
+			<div>
+				<label>Modelo</label>
+				<listbox mold="select" hflex="1">
+		                        <listitem label="1500" />
+		                        <listitem label="1700" />
+		                        <listitem label="1800" selected="true"/>
+		                        <listitem label="3000" />
+		                        <listitem label="otra modelo" />
+		        </listbox>
+			</div>
+		</vbox>
+		
+		
+        <textbox />
+        
+	<div>
+		 -->
+
+			<button label="Next" onClick="" style="float:right"/>
+			<button label="Back" onClick="" style="float:right"/>
+			<button label="Cancel" onClick="" style="float:right"/>
+			
+		</div>
+</window>
+</zk>

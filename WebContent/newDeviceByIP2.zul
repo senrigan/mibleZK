@@ -1,0 +1,16 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new Device" border="normal">
+	<vbox>
+		<label value="ip device is: 192.168.92.64"></label>
+		<label value="the company device: cisco"></label>
+		<label value="model:1.3.6.57"></label>
+	</vbox>
+	<div>
+		<button label="Next" onClick="" style="float:right"/>
+		<button label="Back" onClick="" style="float:right"/>
+		<button label="Cancel" onClick="" style="float:right"/>
+			
+	</div>
+</window>
+</zk>

@@ -1,0 +1,24 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window  border="normal">
+	<div>
+		<vbox>
+			<label value="Create Device :"></label>
+			<radiogroup>
+				<vbox>
+					<radio label="byIP"/>
+					<radio label="Manual"/>
+				</vbox>
+				
+			</radiogroup>
+			<div>
+				<button label="Next" onClick="" style="float:right"/>
+				<button label="Back" onClick="" style="float:right"/>
+				<button label="Cancel" onClick="" style="float:right"/>
+			
+			</div>
+		</vbox>
+			
+	</div>
+</window>
+</zk>

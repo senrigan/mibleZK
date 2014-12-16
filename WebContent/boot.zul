@@ -1,0 +1,45 @@
+<?page title="ZK Theme with Bootstrap 3"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/bootstrap/css/bootstrap.css" ?>
+   
+    <zk>
+    <div height="100%" width="100%" style="background:#000000;" apply="com.gdc.nms.web.mibquery.MenuComposer">
+    	
+    	<vlayout spacing="1" hflex="1" vflex="1">
+    		
+			<div id="top" height="20%" width="30%">
+				<image src="/img/portada/gdc.png"/>
+			</div>
+		
+			<hlayout spacing="0" hflex="1" vflex="1">
+				<div id="menu" height="100%" >
+						<navbar id="menuBar" class="bs-pills" orient="vertical">
+						<navitem label="Network Discovery" selected="true" />
+						<navitem label="Task Scheduler" />
+						<navitem label="Status Administration" />
+						<navitem label="Alert Manager" />
+						<nav label="Poller" >
+							<navitem label="Driver Configuration" />
+							<navitem label="Mib Base Configuratin" />
+						</nav>
+						</navbar>
+				</div>
+				<div id="middle" height="100%" width="100%">
+				
+					
+					<div id="container"   height="100%" >
+						<include src="deviceController.zul"></include>
+					</div>
+				
+				
+				
+				</div>
+			</hlayout>
+		
+			<div id="footer" height="20%" width="100%" style="background:#000000;">
+			</div>
+	    </vlayout>
+    	
+    </div>
+     
+   
+    </zk>
