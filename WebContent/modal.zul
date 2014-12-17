@@ -1,0 +1,6 @@
+<window id="windowModal"   border="normal" position="center,center" action="show: slideDown;hide: slideUp" closable="true" apply="com.gdc.nms.web.mibquery.MenuComposer" >
+    <vlayout>
+        <label value="hola"></label>
+        
+    </vlayout>
+</window>

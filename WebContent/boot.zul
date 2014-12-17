@@ -17,8 +17,15 @@
 						<navitem label="Task Scheduler" />
 						<navitem label="Status Administration" />
 						<navitem label="Alert Manager" />
-						<nav label="Poller" >
-							<navitem label="Driver Configuration" />
+						<nav id="menuPoller" label="Poller" >
+							<navitem label="Driver Configuration" > 
+							<attribute name="onClick">{
+								final Window win = (Window) Executions.createComponents(
+										"newDeviceByIP.zul", null, null);
+								win.setMaximizable(true);
+								win.doModal();
+							}</attribute>
+							</navitem>
 							<navitem label="Mib Base Configuratin" />
 						</nav>
 						</navbar>
