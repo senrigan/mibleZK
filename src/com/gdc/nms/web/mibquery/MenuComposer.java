@@ -1,6 +1,8 @@
 package com.gdc.nms.web.mibquery;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.zkoss.zhtml.Div;
 import org.zkoss.zk.ui.Component;
@@ -22,8 +24,12 @@ public class MenuComposer extends SelectorComposer<Component>{
    
     private static final long serialVersionUID = -2938915709081840018L;
  
+    private boolean positionOutWindows=false;
+    @Wire("#divContent")
+    	private Div divContent;
     @Wire("#windowModal")
     	private Window windowModal;
+    
     @Wire("#menu")
     	private Div menu; 
     
@@ -46,31 +52,64 @@ public class MenuComposer extends SelectorComposer<Component>{
     	}
     @Listen("onOpen=#menuPoller")
     	public void pollerOption() {
-		Clients.showNotification("algo se abrio",true);
+		
 		String menuName=menuPoller.getNavbar().getSelectedItem().getLabel();
 		Clients.showNotification(menuName);
 		
     	}
     @Listen("onClick=#menuPoller > navitem")
 	public void pollerOption3() {
-		Clients.showNotification("algo se clikeo",true);
+		
 		String menuName=menuPoller.getNavbar().getSelectedItem().getLabel();
-		Clients.showNotification(menuName);
+		//Clients.showNotification(menuName);
 	}
     @Listen("onClick=Nav > Navitem")
 	public void pollerOption2() {
-		Clients.showNotification("algo se dropeo",true);
+		//Clients.showNotification("algo se dropeo",true);
 		String menuName=menuPoller.getNavbar().getSelectedItem().getLabel();
 		
-		Clients.showNotification(menuName);
+		//Clients.showNotification(menuName);
 		 Window window = (Window)Executions.createComponents(
 		                "modal.zul", null, null);
 		        window.doModal();
+		        //window.doOverlapped();
+		
+		 List<Component> comp=window.getChildren();
+		 String m="";
+		 for(Component aux:comp) {
+		     m=aux.getClass().getName();
+		    // System.out.println(""+aux.getClass().getName());
+		 }
+		 Clients.showNotification(""+m+window.getRoot().getClass().getName(),true);
+	
 	}
     @Listen("onMouseOut=#windowModal")
     	public void exitWindoModal() {
-		Clients.showNotification("se salio");
+		this.positionOutWindows=true;
+		Clients.showNotification("se salio"+this.positionOutWindows,true);
+		
     	}
+    @Listen("onCancel=#windowModal")
+    	public void escaModal() {
+	Clients.showNotification("esk", true);
+	windowModal.detach();
+    }
+    @Listen("onMouseOver=#windowModal")
+	public void clickWindoModal() {
+		this.positionOutWindows=false;
+		Clients.showNotification("esta adentro"+this.positionOutWindows,true);
+	}
+    @Listen("onRightClick=#windowModal")
+    	public void rightClickModal() {
+		Clients.showNotification("click derecho", true);
+    }
+    
+    @Listen("onClick=#divContent")
+	public void chek() {
+	    Clients.showNotification("mmm",true);
+	}
+    
+    
     
     public void changeContainerPage(String dirPage){
 	try {

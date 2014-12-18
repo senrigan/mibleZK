@@ -2,7 +2,7 @@
 <?link rel="stylesheet" type="text/css" href="/bootstrap/v3/bootstrap/css/bootstrap.css" ?>
    
     <zk>
-    <div height="100%" width="100%" style="background:#000000;" apply="com.gdc.nms.web.mibquery.MenuComposer">
+    <div id="divContent" height="100%" width="100%" style="background:#000000;" apply="com.gdc.nms.web.mibquery.MenuComposer">
     	
     	<vlayout spacing="1" hflex="1" vflex="1">
     		
@@ -23,6 +23,7 @@
 								final Window win = (Window) Executions.createComponents(
 										"newDeviceByIP.zul", null, null);
 								win.setMaximizable(true);
+								win.setClosable(true);
 								win.doModal();
 							}</attribute>
 							</navitem>
