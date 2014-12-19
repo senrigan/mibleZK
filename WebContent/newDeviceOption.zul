@@ -1,10 +1,11 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window  border="normal">
+<window title=" " border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.DeviceOptionComposer" >
+
 	<div>
 		<vbox>
 			<label value="Create Device :"></label>
-			<radiogroup>
+			<radiogroup id="optionDevice" >
 				<vbox>
 					<radio label="byIP"/>
 					<radio label="Manual"/>

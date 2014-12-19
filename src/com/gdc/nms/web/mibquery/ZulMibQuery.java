@@ -12,7 +12,7 @@ import java.util.Map;
 import net.percederberg.mibble.MibType;
 import net.percederberg.mibble.MibValueSymbol;
 
-import org.apache.http.conn.util.InetAddressUtils;
+//import org.apache.http.conn.util.InetAddressUtils;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.Variable;
 import org.zkoss.zk.ui.Component;
@@ -31,7 +31,7 @@ import org.zkoss.zul.Tree;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.TreeModel;
 
-import com.gdc.nms.model.Device;
+/*import com.gdc.nms.model.Device;
 import com.gdc.nms.server.DeviceCache;
 import com.gdc.nms.server.ServerManager;
 import com.gdc.nms.server.drivers.snmp.Driver;
@@ -42,13 +42,13 @@ import com.gdc.nms.server.drivers.snmp.Snmp3Connector;
 import com.gdc.nms.server.drivers.snmp.SnmpConnector;
 import com.gdc.nms.server.drivers.snmp.SnmpConnectorException;
 
-
+*/
 
 
 
 
 public class ZulMibQuery extends SelectorComposer <Component>  {
-	TreeModel model;
+	/*TreeModel model;
 	MibZKTree dataTree ;
 	private Device device;
 	private DeviceCache deviceCache;
@@ -197,8 +197,8 @@ public void snmpWalk(){
 	
 		}
 	}*/
-	
-	
+	*/
+	/*
 	private void setListMib(){
 		
 		ArrayList<MibInfo>		mibLoad,mibNoLoad;

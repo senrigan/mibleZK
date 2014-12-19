@@ -4,7 +4,7 @@
 <zk>
 <window title="Device Controller" border="normal">
 
-<div>
+<div id="divContent" >
 <listbox >
 	<listhead>
 		<listheader label="#" sort="auto" />
@@ -30,7 +30,13 @@
 		<listcell label="1.5.7.8.6" />
 	</listitem>
 </listbox>
-<button label="Nuevo" onClick="" />
+<button label="Nuevo" onClick="" >
+<attribute name="onClick">{
+								final Window win = (Window) Executions.createComponents(
+										"newDeviceOption.zul", null, null);
+								win.doModal();
+							}</attribute>
+</button>
 <button label="Editar" onClick="" />
 <button label="Eliminar" onClick="" />
 <button label="Importar" onClick="" />
