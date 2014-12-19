@@ -1,13 +1,13 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window id="winModal" title=" " border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.DeviceOptionComposer" width="70%" height="40%" >
+<window id="winModal" title="Create Device Controller" border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.DeviceOptionComposer" width="70%" height="40%" >
 	
 			<vbox height="80%" width="100%">
-				<div id="topContent" height="20%" width="100%"  >
+				<div id="topContent" height="20%"   >
 					<image src="/img/portada/gdc.png"  />
 				</div>
 				<separator spacing="20px" />
-				<columnlayout width="100%">
+				<columnlayout id="midlePosition" width="100%">
 					<columnchildren width="50%" height="100%" >
 						<panel title="Process" border="normal" height="100%" >
 							<panelchildren>
@@ -30,10 +30,16 @@
 							<vbox>
 								<label value="Create Device :"/>
 								
-									<vbox>
-										<radio label="byIP" value="0" />
-										<radio label="Manual" value="1" />
-									</vbox>
+									
+									<radiogroup id="optionDevice">
+										<vbox>
+											<radio label="byIP" value="0" />
+											<radio label="Manual" value="1" />
+										</vbox>
+										
+									</radiogroup>
+										
+									
 									
 								
 								

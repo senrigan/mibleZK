@@ -33,7 +33,7 @@
 <button label="Nuevo" onClick="" >
 <attribute name="onClick">{
 								final Window win = (Window) Executions.createComponents(
-										"newDeviceOption.zul", null, null);
+										"modalWindowWizard.zul", null, null);
 								win.doModal();
 							}</attribute>
 </button>
