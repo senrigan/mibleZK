@@ -1,5 +1,7 @@
 package com.gdc.nms.web.mibquery;
 
+import java.util.Arrays;
+
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
@@ -19,14 +21,14 @@ public class DeviceOptionComposer extends SelectorComposer<Component> {
 	private Div midleContent;
 	
 	private int numPage=0;
-    	@Wire("#nextButton")
+    @Wire("#nextButton")
 	private Button nextButton;
 	@Wire("#backButton")
 	private Button backButton;
 	@Wire("#cancelButton")
 	private Button cancelButton;
 	
-    	@Wire("#optionDevice")
+    @Wire("#optionDevice")
 	Radiogroup optionDevice;
 	
 	@Listen("onCheck=#optionDevice")
@@ -38,10 +40,11 @@ public class DeviceOptionComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick=#nextButton")
 	public void nextAction() {
-	    numPage++;
+	    //numPage++;
 	    //Clients.showNotification("next");
 	    midleContent.getChildren().clear();
-	    Clients.showNotification(""+optionDevice.getSelectedItem().getValue());
+	    //Clients.showNotification(""+optionDevice.getChildren());
+	    //Clients.showNotification(""+optionDevice.getSelectedItem().getValue());
 	    changePage();
 	}
 	
@@ -58,21 +61,28 @@ public class DeviceOptionComposer extends SelectorComposer<Component> {
 	}
 	
 	private void changePage() {
-	    Include page=new Include();
-	    switch(numPage) {
-	    
-	    case 1:
-		int a=optionDevice.getSelectedItem().getValue();
-		if(a==0) {
-		    page.setSrc("newDeviceManual.zul");
-		}else if(a==1) {
-		    page.setSrc("newDeviceByIP.zul");
+		Clients.showNotification("se esta haciendo algo");
+		try{
+			 Include page=new Include("./newDeviceManual.zul");
+			    //switch(numPage) {
+			    /*
+			    case 1:
+				int a=optionDevice.getSelectedItem().getValue();
+				if(a==0) {
+				    page.setSrc("newDeviceManual.zul");
+				}else if(a==1) {
+				    page.setSrc("newDeviceByIP.zul");
+				}*/
+			    
+				Clients.showNotification(""+page.getSrc());
+				midleContent.appendChild(page);
+		}catch(Exception ex){
+			Clients.showNotification(""+Arrays.toString(ex.getStackTrace()), true);
 		}
-		Clients.showNotification(""+page.getSrc());
-		midleContent.appendChild(page);
-		break;
+	   
+		//break;
 		
-	    }
+	    //}
 	}
 	
 	@Listen("onCancel=#winModal")

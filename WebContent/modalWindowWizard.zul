@@ -1,68 +1,70 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window id="winModal" title="Create Device Controller" border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.DeviceOptionComposer" width="70%" height="40%" >
-	
-			<vbox height="80%" width="100%">
-				<div id="topContent" height="20%"   >
-					<image src="/img/portada/gdc.png"  />
+	<window id="winModal" title="Create Device Controller" border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.DeviceOptionComposer" width="70%" height="40%" >			
+		<borderlayout height="500px" width="100%" >
+			<north size="20%" >
+				<div id="topContent"  height="100%" >
+					<image src="/img/portada/gdc.png" height="100%"  />
 				</div>
-				<separator spacing="20px" />
-				<columnlayout id="midlePosition" width="100%">
-					<columnchildren width="50%" height="100%" >
-						<panel title="Process" border="normal" height="100%" >
+			</north>
+			<center   border="0">
+				<borderlayout>
+					<west  size="20%"    >
+						<panel title=" Progress Status">
 							<panelchildren>
-							<div id="leftmidleContent"   >
-								<radiogroup >
-									<vbox >
-										<radio label="Metod Configuration"/>
-										<radio label="InfoDevice"/>
-										<radio label="Configuration"/>
-										<radio label="Finish"/>
-									</vbox>
-									
-								</radiogroup>
-							</div>
+								<div id="leftmidleContent"   >
+									<radiogroup >
+										<vbox >
+											<radio label="Metod Configuration"/>
+											<radio label="InfoDevice"/>
+											<radio label="Configuration"/>
+											<radio label="Finish"/>
+										</vbox>
+									</radiogroup>
+								</div>
 							</panelchildren>
 						</panel>
-					</columnchildren>
-					<columnchildren width="50%" height="100%" >
-						<div id="midleContent" width="100%">
-							<vbox>
-								<label value="Create Device :"/>
-								
+		                
+		   			</west>
+		   			
+					<center >
+						<div id="midleContent" height="100%" width="100%">
+								<borderlayout height="100%" >
+									<north border="0">
+										<div>
+													<vbox>
+														<label value="Create Device :"/>
+														<radiogroup>
+														
+															<vbox>
+																<radio label="byIP" value="0" />
+																<radio label="Manual" value="1" />
+															</vbox>
+															
+														</radiogroup>
+														
+													</vbox>
+											
+										</div>
+									</north>
+									<south border="0" >
+										<div >
+											
+											<button id="nextButton" label="Next" onClick="" style="float:right"/>
+											<button id="backButton" label="Back" onClick="" style="float:right"/>
+											<button id="cancelButton" label="Cancel" onClick="" style="float:right"/>
+														
+											
+										</div>
 									
-									<radiogroup id="optionDevice">
-										<vbox>
-											<radio label="byIP" value="0" />
-											<radio label="Manual" value="1" />
-										</vbox>
-										
-									</radiogroup>
-										
-									
-									
-								
-								
-							</vbox>
-								
+									</south>
+								</borderlayout>
+						
 						</div>
-					</columnchildren>
-				</columnlayout>
-				
-			</vbox>
-			
-			<separator spacing="20px" />
-			<div height="20%" id="footContent" width="100%"  >
-				
-				<button id="nextButton" label="Next" onClick="" style="float:right"/>
-				<button id="backButton" label="Back" onClick="" style="float:right"/>
-				<button id="cancelButton" label="Cancel" onClick="" style="float:right"/>
-							
-				
-			</div>
+					</center>
+				</borderlayout>
+			</center>
+		</borderlayout>
 		
-		
-	
-	
-</window>
+	</window>
 </zk>

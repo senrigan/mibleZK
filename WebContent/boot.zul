@@ -33,10 +33,22 @@
 				</div>
 				<div id="middle" height="100%" width="100%">
 				
-					
-					<div id="container"   height="100%" >
-						<include src="deviceController.zul"></include>
-					</div>
+					<tabbox>
+						<tabs>
+							<tab label="SNMP" />
+							<tab label="CLI" />
+						</tabs>
+						<tabpanels>
+							<tabpanel>
+							<div id="container"   height="100%" >
+								<include src="deviceController.zul"></include>
+							</div>
+							
+							</tabpanel>
+							<tabpanel></tabpanel>
+						</tabpanels>
+					</tabbox>
+						
 				
 				
 				

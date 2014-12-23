@@ -1,24 +1,33 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="new Device" border="normal">
 
-	<vbox>
-		<hbox>
-			<label >ip</label>
-			<textbox />
+	<div width="100%" height="150px" apply="com.gdc.nms.web.mibquery.ManualIPComposerStep1">
+	
+		<borderlayout>
+			<north>
+				<vbox>
+					<hbox>
+						<label >ip</label>
+						<textbox />
+						
+					    
+						
+					</hbox>
+				</vbox>
+			</north>
+			<south>
+				<div>
+					<button id="nextButton" label="Next" onClick="" style="float:right"/>
+					<button id="backButton" label="Back" onClick="" style="float:right"/>
+					<button id="cancelButton" label="Cancel" onClick="" style="float:right"/>		
+				</div>
+			</south>
+		</borderlayout>
+		
 			
-		    
-			
-		</hbox>
-		<div>
-			<button id="nextButton" label="Next" onClick="" style="float:right"/>
-			<button id="backButton" label="Back" onClick="" style="float:right"/>
-			<button id="cancelButton" label="Cancel" onClick="" style="float:right"/>
-			
-		</div>
+				
 			
 		
-	</vbox>
+	</div>
 
-</window>
 </zk>
