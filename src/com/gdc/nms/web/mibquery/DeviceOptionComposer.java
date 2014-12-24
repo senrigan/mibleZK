@@ -3,6 +3,9 @@ package com.gdc.nms.web.mibquery;
 import java.util.Arrays;
 
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -13,7 +16,7 @@ import org.zkoss.zul.Include;
 import org.zkoss.zul.Radiogroup;
 import org.zkoss.zul.Window;
 
-public class DeviceOptionComposer extends SelectorComposer<Component> {
+public class DeviceOptionComposer extends SelectorComposer<Window> {
 	@Wire("#winModal")
 	private Window winModal;
 	
@@ -31,6 +34,16 @@ public class DeviceOptionComposer extends SelectorComposer<Component> {
     @Wire("#optionDevice")
 	Radiogroup optionDevice;
 	
+    public void doAfterCompose(Window comp) throws Exception {
+	comp.getParent().addEventListener(Events.ON_CLICK, new EventListener<Event>() {
+
+	    @Override
+	    public void onEvent(Event event) throws Exception {
+		Clients.showNotification("Evento");
+	    }
+	});
+    }
+    
 	@Listen("onCheck=#optionDevice")
 	public void onChangeOption(){
 		String name;

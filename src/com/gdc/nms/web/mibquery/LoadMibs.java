@@ -55,18 +55,18 @@ public class LoadMibs {
 		File directory=new File(dirPath);
 		File ietf=new File(dirPath+"/ietf");
 		File iana=new File(dirPath+"/iana");
-		File cisco=new File(dirPath+"/cisco");
-		File _3com=new File(dirPath+"/3com");
-		File windows=new File(dirPath+"/windows");
-		File hauwei=new File(dirPath+"/hauwei");
+		File cisco=new File(dirPath+"/private/cisco");
+		File _3com=new File(dirPath+"/private/3com");
+		File windows=new File(dirPath+"/private/windows");
+		File hauwei=new File(dirPath+"/private/hauwei");
 		loader.addResourceDir(dirPath+"/ietf");
 		loader.addResourceDir(dirPath+"/iana");
 		loader.addResourceDir(dirPath);
-		loader.addResourceDir(dirPath+"/cisco");
+		loader.addResourceDir(dirPath+"/private/cisco");
 		loader.addDir(new File(dirPath+"/ietf"));
 		loader.addDir(new File(dirPath+"/iana"));
 		loader.addDir(new File(dirPath));
-		loader.addDir(new File(dirPath+"/cisco"));
+		loader.addDir(new File(dirPath+"/private/cisco"));
 		loadResource(ietf,loader);
 		loadResource(iana,loader);
 		loadDirectory(cisco,loader);
@@ -219,7 +219,7 @@ public class LoadMibs {
 	    Mib mibs[]=miblod.getAllMibs();
 	    MibSymbol symbol;
 	    Iterator<?> iter;
-	    int nummibns=0;
+	    int nummibns=0,numiod=0,e=0,t=0,c=0,r=0,bas=0;
 	    for(Mib aux:mibs) {
 		nummibns++;
 		iter = aux.getAllSymbols().iterator();
@@ -231,15 +231,26 @@ public class LoadMibs {
 			if (symbol instanceof MibValueSymbol) {
 				value = ((MibValueSymbol) symbol).getValue();
 				oidTable = (MibValueSymbol) symbol;
+				
+				numiod++;
 				MibValueSymbol symbol2=oidTable;
+				
 				 if (symbol != null && symbol2.getType() instanceof SnmpObjectType) {
 				           SnmpObjectType snmp=(SnmpObjectType) symbol2.getType();
-				           System.out.println("snmp nam"+snmp.getName());
+				           System.out.println("num "+symbol2.getValue());
+
+				           System.out.println("tyope "+symbol2.getType());
+				           System.out.println("tyope "+symbol2.getType().getTag());
+
+				          // System.out.println("tyope "+symbol2.getType().getTag().getCategory());
+				          
+				           // System.out.println("snmp nam"+snmp.getName());
 				           System.out.println("snmp acces"+snmp.getAccess());
-				           System.out.println("snmp augment"+snmp.getAugments());
-				           System.out.println("snmp commet"+snmp.getComment());
-				           System.out.println("snmp descriop"+snmp.getDescription());
-				           System.out.println("snmp reference"+snmp.getReference());
+				           System.out.println("name"+snmp.getName());
+				           //System.out.println("snmp augment"+snmp.getAugments());
+				           //System.out.println("snmp commet"+snmp.getComment());
+				           //System.out.println("snmp descriop"+snmp.getDescription());
+				           //System.out.println("snmp reference"+snmp.getReference());
 				           System.out.println("snmp unit"+snmp.getUnits());
 				           System.out.println("snmp defaultvalue"+snmp.getDefaultValue());
 				           System.out.println("snmp index"+snmp.getIndex());
@@ -261,30 +272,45 @@ public class LoadMibs {
 					oid = (ObjectIdentifierValue) value;
 					oidString = "" + oid;
 					//System.out.println("value oid"+oid.getValue());//valor final del oid
-					System.out.println("type oid"+oid.getSymbol());
+					/*System.out.println("type oid"+oid.getSymbol());
 
 					System.out.println("table"+oid.getSymbol().isTable());
 					System.out.println("escalar"+oid.getSymbol().isScalar());
 					System.out.println("column"+oid.getSymbol().isTableColumn());
 					System.out.println("row"+oid.getSymbol().isTableRow());
+					*/
+					if(oid.getSymbol().isTable()) {
+					    t++;
+					}else if(oid.getSymbol().isTableColumn()) {
+					    c++;
+					}else if(oid.getSymbol().isTableRow()) {
+					    r++;
+					}else if(oid.getSymbol().isScalar()) {
+					    e++;
+					}else {
+					    System.out.println(""+oid);
+					    bas++;
+					}
+				
 
-					try {
-					    System.out.println("typeV oid"+oid.getSymbol().getType().getTag().getValue());
-					    System.out.println("typeN oid"+oid.getSymbol().getType().getTag().getNext());
+					/*try {
+					    //System.out.println("typeV oid"+oid.getSymbol().getType().getTag().getValue());
+					    //System.out.println("typeN oid"+oid.getSymbol().getType().getTag().getNext());
 
 					}catch(Exception ex) {
 					    System.out.println("error");
 
-					}
+					}*/
 					
 					//System.out.println("type oid"+oid.getSymbol().getType().getTag().get);
 					//System.out.println("symbol oid"+Arrays.toString(oid.getSymbol().getChildren()));
 					//System.out.println("refer oid"+oid.getReferenceSymbol());
 				}
+				
 			}
 		}
 	    }
-	    System.out.println("total mibs"+ nummibns);
+	    System.out.println("total mibs"+ nummibns+"num oid"+numiod+"e"+e+" c"+c+" r"+r+"t"+t+"bas"+bas);
 	}
 
 }
