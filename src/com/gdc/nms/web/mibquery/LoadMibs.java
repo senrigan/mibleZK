@@ -235,38 +235,7 @@ public class LoadMibs {
 				numiod++;
 				MibValueSymbol symbol2=oidTable;
 				
-				 if (symbol != null && symbol2.getType() instanceof SnmpObjectType) {
-				           SnmpObjectType snmp=(SnmpObjectType) symbol2.getType();
-				           System.out.println("num "+symbol2.getValue());
-
-				           System.out.println("tyope "+symbol2.getType());
-				           System.out.println("tyope "+symbol2.getType().getTag());
-
-				          // System.out.println("tyope "+symbol2.getType().getTag().getCategory());
-				          
-				           // System.out.println("snmp nam"+snmp.getName());
-				           System.out.println("snmp acces"+snmp.getAccess());
-				           System.out.println("name"+snmp.getName());
-				           //System.out.println("snmp augment"+snmp.getAugments());
-				           //System.out.println("snmp commet"+snmp.getComment());
-				           //System.out.println("snmp descriop"+snmp.getDescription());
-				           //System.out.println("snmp reference"+snmp.getReference());
-				           System.out.println("snmp unit"+snmp.getUnits());
-				           System.out.println("snmp defaultvalue"+snmp.getDefaultValue());
-				           System.out.println("snmp index"+snmp.getIndex());
-				           System.out.println("snmp status"+snmp.getStatus());
-				           System.out.println("snmp syntaxis"+snmp.getSyntax());
-
-
-
-
-
-
-
-
-				        } else {
-				            System.out.println("algo paso");
-				        }
+			
 				if (value instanceof ObjectIdentifierValue) {
 					String oidString;
 					oid = (ObjectIdentifierValue) value;
@@ -279,19 +248,107 @@ public class LoadMibs {
 					System.out.println("column"+oid.getSymbol().isTableColumn());
 					System.out.println("row"+oid.getSymbol().isTableRow());
 					*/
-					if(oid.getSymbol().isTable()) {
-					    t++;
-					}else if(oid.getSymbol().isTableColumn()) {
-					    c++;
-					}else if(oid.getSymbol().isTableRow()) {
-					    r++;
-					}else if(oid.getSymbol().isScalar()) {
-					    e++;
-					}else {
-					    System.out.println(""+oid);
-					    bas++;
+					try {
+					    if(oid.getSymbol().isTable()) {
+						    t++;
+						}else if(oid.getSymbol().isTableColumn()) {
+						    System.out.println("Column**");
+							 if (symbol != null && symbol2.getType() instanceof SnmpObjectType) {
+							           SnmpObjectType snmp=(SnmpObjectType) symbol2.getType();
+							           System.out.println("num "+symbol2.getValue());
+							           System.out.println("mib name "+symbol2.getMib().getName());
+							           System.out.println("tyope "+symbol2.getType());
+							           System.out.println("tyope "+symbol2.getType().getTag());
+
+							          // System.out.println("tyope "+symbol2.getType().getTag().getCategory());
+							          
+							           // System.out.println("snmp nam"+snmp.getName());
+							           System.out.println("snmp acces"+snmp.getAccess());
+							           System.out.println("name"+snmp.getName());
+							           //System.out.println("snmp augment"+snmp.getAugments());
+							           //System.out.println("snmp commet"+snmp.getComment());
+							           //System.out.println("snmp descriop"+snmp.getDescription());
+							           //System.out.println("snmp reference"+snmp.getReference());
+							           System.out.println("snmp unit"+snmp.getUnits());
+							           System.out.println("snmp defaultvalue"+snmp.getDefaultValue());
+							           System.out.println("snmp index"+snmp.getIndex());
+							           System.out.println("snmp status"+snmp.getStatus());
+							           System.out.println("snmp syntaxis"+snmp.getSyntax());
+							           System.out.println("snmp syntaxis tag"+snmp.getSyntax().getTag());
+							           System.out.println("snmp syntaxis tag category"+snmp.getSyntax().getTag().getCategory());
+							           System.out.println("snmp syntaxis tag value"+snmp.getSyntax().getTag().getValue());
+							          // System.out.println("snmp syntaxis tag location"+snmp.getSyntax().getReferenceSymbol().getLocation());
+							           //System.out.println(""+snmp.getSyntax());
+							           //System.out.println("index"+snmp.getIndex());
+							           System.out.println("snmp syntaxis tag name"+snmp.getSyntax().getName());
+
+
+
+
+
+							        } else {
+							            System.out.println("algo paso");
+							        }
+						    c++;
+						}else if(oid.getSymbol().isTableRow()) {
+						    r++;
+						}else if(oid.getSymbol().isScalar()) {
+						    e++;
+						    	System.out.println("eclar++");
+							 if (symbol != null && symbol2.getType() instanceof SnmpObjectType) {
+							           SnmpObjectType snmp=(SnmpObjectType) symbol2.getType();
+							           System.out.println("num "+symbol2.getValue());
+							           System.out.println("mib name "+symbol2.getMib().getName());
+
+							           System.out.println("tyope "+symbol2.getType());
+							           System.out.println("tyope "+symbol2.getType().getTag());
+
+							          // System.out.println("tyope "+symbol2.getType().getTag().getCategory());
+							          
+							           // System.out.println("snmp nam"+snmp.getName());
+							           System.out.println("snmp acces"+snmp.getAccess());
+							           System.out.println("name"+snmp.getName());
+							           //System.out.println("snmp augment"+snmp.getAugments());
+							           //System.out.println("snmp commet"+snmp.getComment());
+							           //System.out.println("snmp descriop"+snmp.getDescription());
+							           //System.out.println("snmp reference"+snmp.getReference());
+							           System.out.println("snmp unit"+snmp.getUnits());
+							           System.out.println("snmp defaultvalue"+snmp.getDefaultValue());
+							           System.out.println("snmp index"+snmp.getIndex());
+							           System.out.println("snmp status"+snmp.getStatus());
+							           System.out.println("snmp syntaxis"+snmp.getSyntax());
+							           System.out.println("snmp syntaxis tag"+snmp.getSyntax().getTag());
+							           System.out.println("snmp syntaxis tag category"+snmp.getSyntax().getTag().getCategory());
+							           System.out.println("snmp syntaxis tag value"+snmp.getSyntax().getTag().getValue());
+							           System.out.println("snmp syntaxis tag location"+snmp.getSyntax().getReferenceSymbol().getLocation());
+							           System.out.println(""+snmp.getSyntax());
+							           System.out.println("index"+snmp.getIndex());
+							           System.out.println("snmp syntaxis tag name"+snmp.getSyntax().getName());
+
+
+
+
+
+
+
+
+
+
+
+
+
+							        } else {
+							            System.out.println("algo paso");
+							        }
+						}else {
+						    System.out.println(""+oid);
+						    bas++;
+						}
+					
+					}catch(Exception ex) {
+					    System.out.println("ex");
 					}
-				
+					
 
 					/*try {
 					    //System.out.println("typeV oid"+oid.getSymbol().getType().getTag().getValue());
