@@ -12,6 +12,7 @@ import net.percederberg.mibble.MibLoader;
 import net.percederberg.mibble.MibLoaderException;
 import net.percederberg.mibble.MibLoaderLog;
 import net.percederberg.mibble.MibSymbol;
+import net.percederberg.mibble.MibType;
 import net.percederberg.mibble.MibValue;
 import net.percederberg.mibble.MibValueSymbol;
 import net.percederberg.mibble.snmp.SnmpObjectType;
@@ -240,6 +241,7 @@ public class LoadMibs {
 					String oidString;
 					oid = (ObjectIdentifierValue) value;
 					oidString = "" + oid;
+					MibType mt;
 					//System.out.println("value oid"+oid.getValue());//valor final del oid
 					/*System.out.println("type oid"+oid.getSymbol());
 
@@ -368,6 +370,15 @@ public class LoadMibs {
 		}
 	    }
 	    System.out.println("total mibs"+ nummibns+"num oid"+numiod+"e"+e+" c"+c+" r"+r+"t"+t+"bas"+bas);
+	    m.Gato.
 	}
-
+	enum m{
+		Gato,
+		H
+		,I
+		,K;
+		public enum Gato{
+			o,p,w
+		}
+	}
 }
