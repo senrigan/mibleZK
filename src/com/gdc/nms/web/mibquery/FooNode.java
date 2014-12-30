@@ -14,6 +14,7 @@ public class FooNode {
 	private int _index;
 	private String _label = "";
 	private MibNode value;
+	private InfoOID info;
 	public FooNode (FooNode parent, int index, String label) {
 		_parent = parent;
 		_index = index;
@@ -64,6 +65,13 @@ public class FooNode {
 		return this.value;
 	}
 	
+	public void setInfoOID(InfoOID info) {
+	    this.info=info;
+	}
+	
+	public InfoOID getInfoOID() {
+	    return this.info;
+	}
 	public ObjectIdentifierValue getValue(){
 		return value.getValue();
 	}

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/src"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -8,6 +12,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/MibbleBrowser.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/MibbleBrowser.jar" sourcepath="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/src"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -370,15 +370,7 @@ public class LoadMibs {
 		}
 	    }
 	    System.out.println("total mibs"+ nummibns+"num oid"+numiod+"e"+e+" c"+c+" r"+r+"t"+t+"bas"+bas);
-	    m.Gato.
+	    
 	}
-	enum m{
-		Gato,
-		H
-		,I
-		,K;
-		public enum Gato{
-			o,p,w
-		}
-	}
+	
 }
