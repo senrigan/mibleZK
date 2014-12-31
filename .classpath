@@ -13,5 +13,8 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/MibbleBrowser.jar" sourcepath="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/src"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/lib/xstream-1.4.7.jar" sourcepath="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/lib/xstream-1.4.7.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/commons-io-2.4/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/commons-io-2.4/commons-io-2.4-javadoc.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
