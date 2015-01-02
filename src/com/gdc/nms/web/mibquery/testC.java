@@ -3,6 +3,7 @@ package com.gdc.nms.web.mibquery;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 
@@ -26,6 +27,36 @@ public class testC {
 	// TODO Auto-generated method stub
 	DeviceFileManager dv=new DeviceFileManager();
 	ArrayList<DeviceControllerManager> dvc=new ArrayList<DeviceControllerManager>();
+	ArrayList<SnmpElement> elm=new ArrayList<SnmpElement>();
+	Date date=new Date();
+	String oid="1.3.4.56";
+	InfoDevice inf=new InfoDevice(new Company(157,new String ("cisco")), new Model(new String ("1.3.5.6.7"),new String ("1800"),new String("quien sabe")));
+	DeviceControllerManager x=new DeviceControllerManager(elm,oid,inf,date);
+//	y.setDateCreate(date);
+	inf=new InfoDevice(new Company(157,new String ("cisscos")), new Model(new String ("1.3.5.6.7.9.9"),new String ("1999"),new String("quien sabe que")));
+	oid="57.8389.82877.889989";
+	date=new Date();
+	 elm=new ArrayList<SnmpElement>();
+	 SnmpElement snmp=new Escalar();
+	 snmp.setAcces("hola");
+	 snmp.setDataType(DataType.BITSTRING);
+	 snmp.setDescription("hola k hace");
+	 snmp.SetOID("1.2.3.4.58.6");
+	 snmp.setSnmpType(SNMPType.COLUMN);
+	 elm.add(snmp);
+	 snmp=new Escalar();
+	 snmp.setAcces("hola");
+	 snmp.setDataType(DataType.BITSTRING);
+	 snmp.setDescription("hola k hace");
+	 snmp.SetOID("1.2.3.4.58.6");
+	 snmp.setSnmpType(SNMPType.COLUMN);
+	 elm.add(snmp);
+	DeviceControllerManager y=new DeviceControllerManager(elm,oid,inf,date);
+	
+	dvc.add(x);
+	dvc.add(y);
+	
+	System.out.println("dvc"+dvc);
 	dv.writeDevice(dvc);
     }
     /*public static void main(String args[]) {

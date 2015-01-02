@@ -1,15 +1,33 @@
 package com.gdc.nms.web.mibquery;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
 public class DeviceControllerManager {
+    @XStreamImplicit
     private ArrayList<SnmpElement>itemOID;
     private String 	sysoOID;
     private InfoDevice 	info;
     private Date	dateCreate;
     
-  
+    public DeviceControllerManager() {
+    
+    }
+    @Override
+    public String toString() {
+	return "DeviceControllerManager [itemOID=" + itemOID + ", sysoOID="
+		+ sysoOID + ", info=" + info + ", dateCreate=" + dateCreate
+		+ "]";
+    }
+    public DeviceControllerManager(ArrayList<SnmpElement> itemOID,String sysoOID,InfoDevice info,Date dateCreate) {
+	this.itemOID=itemOID;
+	this.sysoOID=sysoOID;
+	this.info=info;
+	this.dateCreate=dateCreate;
+	
+    }
 
     public ArrayList<SnmpElement> getItemOID() {
         return itemOID;
