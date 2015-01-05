@@ -1,0 +1,50 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<div width="100%" height="100%" apply="com.gdc.nms.web.mibquery.ManualComposerStep1">
+		<borderlayout height="150px" width="100%" >
+		
+			<north border="0">
+				<vbox>
+					<div>
+						<label >ip</label>
+						<textbox />
+					</div>
+					<div>
+						<label >version snmp</label>
+						<listbox mold="select" hflex="1">
+					                        <listitem label="V1" />
+					                        <listitem label="V2" />
+					                        <listitem label="V3" selected="true"/>
+					     </listbox>
+					</div>
+					<div>
+						<label >comunidad</label>
+						<listbox mold="select" hflex="1">
+				                        <listitem label="publica" />
+				                        <listitem label="privada" />
+				                        <listitem label="otra" selected="true"/>
+				     	</listbox>
+					</div>
+				     
+				     <div id="userComunity" visible="true">
+				     	 <label >User</label>
+				 		 <textbox></textbox>
+				     </div>
+				    
+					
+				</vbox>
+			</north>
+			<south border="0">
+				<div>
+					<button  id="nextButton" label="Next" onClick="" style="float:right"/>
+					<button  id="backButton" label="Back" onClick="" style="float:right"/>
+					<button   id="cancelButton" label="Cancel" onClick="" style="float:right"/>
+				
+				</div>
+			</south>
+		</borderlayout>
+	</div>
+	
+
+
+</zk>

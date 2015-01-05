@@ -1,0 +1,42 @@
+<device Controller>
+	<device List>
+		<device item>
+			<device Info>
+				<company>cisco </company>
+				<model>1.2.4.5</model>
+				<description></description>
+				<SysoOID>1.3.
+				5.548<SysoOID>
+				<Date Creation>
+					11-7-2012
+				</Date Creation>
+
+			</device Info>
+			<SNMP>
+				<SNMP Item>
+					<table>
+						<oid>1.3.6.1.2.1.2.2</oid>
+						<name>ifTable</name>
+						<description>
+						a list of interfaces entries the numbrer if entries is given by value of if number
+						</description>
+						<SNMP Item>
+							<scalar>
+
+								<oid>1</oid>
+								<type>OCTETSTR</type>
+								<acces>ReadOnly</acces>
+								<name>ifDescr</name>
+								<descripton>
+									a textual string containg informaton about interfaces this string shuld include the name manafatcure
+								</description>
+							</scalar>
+						</SNMP Item>
+					</tale>
+				</SNMP Item>
+			</SNMP>
+			<CLI>
+				<version>
+					-
+				</version>
+			</CLI>

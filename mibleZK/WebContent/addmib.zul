@@ -1,0 +1,12 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="AñadirMib" border="normal">
+	<vbox>
+		<hbox>
+			<fileupload label="subir archivo mib"/>
+			<textbox />
+		</hbox>
+		<button label="añadir"></button>
+	</vbox>
+</window>
+</zk>
