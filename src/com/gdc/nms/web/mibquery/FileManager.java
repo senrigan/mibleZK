@@ -54,8 +54,16 @@ public class FileManager {
 	
     }
     
-    public void saveXML(List<?> listDevice) {
-	
+    public void saveXML(String listDevice) {
+    	System.out.println("se esta escribiendo en archivo"+dataDirectory.getAbsolutePath()+"/device.xml");
+    	File file=new File(dataDirectory.getAbsolutePath()+"/device.xml");
+    	try {
+			FileUtils.writeStringToFile(file, listDevice);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     public void saveMibBase(LoadMibs loader) {
@@ -73,7 +81,7 @@ public class FileManager {
 	 try {
 	    in=new FileInputStream(dataDirectory.getAbsolutePath()+"/device.xml");
 	    xml=IOUtils.toString( in );
-	    System.out.println(""+xml);
+	    System.out.println("leyendo archivo"+xml);
 	    IOUtils.closeQuietly(in);
 	    
 	} catch (Exception e1) {

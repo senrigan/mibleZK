@@ -11,7 +11,7 @@ public class MibBaseComposer {
     }
     
     public String consultMib(String oid) {
-	
+    	return null;
     }
     
     public void exportMibBase() {
@@ -23,7 +23,7 @@ public class MibBaseComposer {
     }
     
     public ArrayList<String> listMib() {
-	
+    	return null;
     }
     
     

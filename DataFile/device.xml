@@ -1,12 +1,51 @@
-<person>
-  <firstname>Joe</firstname>
-  <lastname>Walnes</lastname>
-  <phone>
-    <code>123</code>
-    <number>1234-456</number>
-  </phone>
-  <fax>
-    <code>123</code>
-    <number>9999-999</number>
-  </fax>
-</person>
+<Devicescontrollers>
+  <DeviceList>
+    <DeviceItem>
+      <SNMP/>
+      <sysoOID>1.3.4.56</sysoOID>
+      <info>
+        <company>
+          <id>157</id>
+          <companyName>cisco</companyName>
+        </company>
+        <model>
+          <id>1.3.5.6.7</id>
+          <name>1800</name>
+          <description>quien sabe</description>
+        </model>
+      </info>
+      <dateCreate>2015-01-05 08:58:51.356 UTC</dateCreate>
+    </DeviceItem>
+    <DeviceItem>
+      <SNMP>
+        <com.gdc.nms.web.mibquery.Escalar>
+          <oid>1.2.3.4.58.6</oid>
+          <description>hola k hace</description>
+          <snmpType>COLUMN</snmpType>
+          <dataType>BITSTRING</dataType>
+          <acces>hola</acces>
+        </com.gdc.nms.web.mibquery.Escalar>
+        <com.gdc.nms.web.mibquery.Escalar>
+          <oid>1.2.3.4.58.6</oid>
+          <description>hola k hace</description>
+          <snmpType>COLUMN</snmpType>
+          <dataType>BITSTRING</dataType>
+          <acces>hola</acces>
+        </com.gdc.nms.web.mibquery.Escalar>
+      </SNMP>
+      <sysoOID>57.8389.82877.889989</sysoOID>
+      <info>
+        <company>
+          <id>157</id>
+          <companyName>cisscos</companyName>
+        </company>
+        <model>
+          <id>1.3.5.6.7.9.9</id>
+          <name>1999</name>
+          <description>quien sabe que</description>
+        </model>
+      </info>
+      <dateCreate>2015-01-05 08:58:51.359 UTC</dateCreate>
+    </DeviceItem>
+  </DeviceList>
+</Devicescontrollers>

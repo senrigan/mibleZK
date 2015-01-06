@@ -58,6 +58,8 @@ public class testC {
 	
 	System.out.println("dvc"+dvc);
 	dv.writeDevice(dvc);
+	System.out.println("opteneidndo archivo");
+	dv.getDevice();
     }
     /*public static void main(String args[]) {
 	//XStream xstream = new XStream();

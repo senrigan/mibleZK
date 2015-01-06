@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 public class DeviceControllerManager {
-    @XStreamImplicit
+  
     private ArrayList<SnmpElement>itemOID;
     private String 	sysoOID;
     private InfoDevice 	info;
     private Date	dateCreate;
-    
+    private DeviceConfigurationController configuration;
     public DeviceControllerManager() {
     
     }
