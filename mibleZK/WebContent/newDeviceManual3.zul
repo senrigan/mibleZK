@@ -1,0 +1,126 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+	<div width="100%" height="700px" apply="com.gdc.nms.web.mibquery.ManualComposerStep3">
+		
+		<borderlayout>
+			<north>
+				<div>
+					<groupbox>
+						<caption >
+							<label value="deviceInfo"></label>
+						</caption>
+						<vbox>
+							<label value="ip device is: 192.168.92.64"></label>
+							<label value="the company device: cisco"></label>
+							<label value="model:1.3.6.57"></label>
+						</vbox>
+					</groupbox>
+					
+					
+					<groupbox>
+						<caption>
+							<label value="OID Element"></label>
+						</caption>
+						<vbox>
+						<hbox>
+						<radio label="Generic" onClick="" />
+						<radio label="Private" onClick="" />
+						<radio label="Definido" onClick="" />
+						<radio label="All generic and Private" onClick="" />
+						</hbox>
+						<button label="run consult" image="/img/pages/mible/run.png"></button>
+					</vbox>
+					
+					<vbox>
+						<hbox>
+						 	<label >Define</label>
+						 	<textbox></textbox>
+						 </hbox>
+						 <div>
+						 
+						 </div>
+						
+						
+					</vbox>
+					<hbox>
+					<!--
+						<groupbox mold="3d" width="50%" style="float:left;"> 
+							<label>tree</label>
+						</groupbox>
+						
+						<tree id="treeMib" width="50%">
+															
+															</tree>
+														
+															<div id="textDiv" width="50%"  >
+															<textbox >dasdadad</textbox>
+															</div>
+					-->
+					</hbox>
+						<vbox>
+							<hbox spacing="30em">
+								<textbox multiline="true" height="200px"  value="1.34" style="float:left"></textbox>
+								<textbox multiline="true"  height="200px"  value="Description" style="float:right" ></textbox>
+							</hbox>
+							
+						</vbox>
+						<hbox spacing="17em">
+							<div>
+								<label>oid/definition</label>
+								<textbox />
+								<button label="Search" onClick="" image="/img/pages/mible/search.png"/>
+							</div>
+							
+						</hbox>
+					</groupbox>
+					
+						
+						
+					<div>
+						<groupbox > 
+							<caption>
+							 	<label value="List OID"></label>
+							</caption>
+							<hbox>
+							<div>
+								<button label="Add To List" onClick="" image="/img/pages/mible/addList.png"/>
+							</div>
+							<button label="remove" image="/img/pages/mible/removeList.png"></button>
+						</hbox>
+						<listbox >
+							<listhead>
+								<listheader label="oid" sort="auto" />
+								<listheader label="type" sort="auto" />
+							</listhead>
+							<listitem>
+								<listcell label="" />
+								<listcell label="" />
+							</listitem>
+							<listitem>
+								<listcell label="" />
+								<listcell label="" />
+							</listitem>
+						</listbox>
+						</groupbox>
+				
+					</div>	
+				</div>
+			</north>
+			
+			<south>
+				<div>
+					<button label="Finish create Controller" onClick="" style="float:right"/>
+					<button label="Back" onClick="" style="float:right"/>
+					<button label="Cancel" onClick="" style="float:right"/>
+				
+				</div>
+			</south>
+		</borderlayout>
+	</div>
+	
+		
+	
+	
+
+</zk>

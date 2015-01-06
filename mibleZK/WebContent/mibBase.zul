@@ -1,0 +1,12 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Mib Base Editor" border="normal">
+<hbox>
+	<button label="Añadir mib" onClick="" />
+	<button label="importar mib Base" onClick="" />
+	<button label="exportar mib Base" onClick="" />
+	<button label="consult mib Base" onClick="" />
+</hbox>
+
+</window>
+</zk>

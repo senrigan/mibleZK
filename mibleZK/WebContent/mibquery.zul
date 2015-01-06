@@ -1,0 +1,91 @@
+<?page title="Auto Generated index.zul"?>
+<zk>
+	<div width="100%" height="100%" apply="com.gdc.nms.web.mibquery.ZulMibQuery">
+		<tabbox width="100%"  >
+			<tabs>
+				<tab label="device" selected="true"/>
+				<tab label="consult mib"/>
+				<tab label="mib loaded"/>
+				<tab label="mib no loaded"/>
+				
+			</tabs>
+			<tabpanels >
+				<tabpanel style="overflow: auto" >
+					<vbox  style="overflow: auto" vflex="1" hflex="1">
+						<div >
+							<groupbox mold="3d" width="50%" style="float:left;" >
+								<vbox>
+										
+									<hbox>
+										<textbox id="ipAddress"/>
+										<button id="searchBtn" label="search" onClick="" />
+									</hbox>
+									<hbox>
+										<textbox id="textOid"/>
+										<button id="walkBtn" label="walk" onClick="" />
+									</hbox>
+											
+								</vbox>
+							</groupbox>
+							<groupbox mold="3d" width="50%" style="float:right;" >
+								<vbox>
+									<label value="oid consulta"/>
+									<hbox>
+										<textbox id="oidText"/>
+										<button id="consultBtn" label="consult" onClick="" />
+									</hbox>
+									
+											
+								</vbox>
+							</groupbox>
+						</div>
+						
+						<div vflex="1" >
+							<groupbox mold="3d" width="100%"  style="float:left;"  hflex="1"  >
+								<hbox spacing="0"  width="100%"   > 
+											<tree id="treeMib" width="50%"     >
+											
+											</tree>
+										<splitter id="s2" collapse="before"  />
+											<div id="textDiv" width="50%"  >
+											
+											</div>
+											
+									</hbox>
+							</groupbox>
+							
+						</div>
+							
+					</vbox>
+					
+				</tabpanel>
+				
+				<tabpanel style="overflow: auto " vflex="1">
+					<label value="hola"></label>
+				</tabpanel>
+					
+				<tabpanel style="overflow: auto " vflex="1">
+				
+					<listbox  id="listLoaded">
+						<listhead>
+							<listheader label="Mibs Name" sort="auto"/>
+						</listhead> 
+					</listbox>
+										
+				</tabpanel>
+				
+				<tabpanel style="overflow: auto " vflex="1">
+					<label value="No loadead mibs: " id="lblNoLoad" style="font-size:13pt;" />
+					<listbox  id="listNoLoaded">
+						<listhead>
+							<listheader label="Mibs Name" sort="auto"/>
+						</listhead> 
+					</listbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+		
+	</div>
+</zk>
+	
+	

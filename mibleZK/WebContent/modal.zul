@@ -1,0 +1,8 @@
+
+	<window apply="com.gdc.nms.web.mibquery.MenuComposer" id="windowModal"  title=" MibInstallation" border="normal"  position="center,center" closable="true" action="show: slideDown;hide: slideUp" Maximizable="true" width="700px" height="500px" >
+	    <vlayout>
+			<label value="hola"></label>
+		</vlayout>
+	       
+	</window>
+
