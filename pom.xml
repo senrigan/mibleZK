@@ -17,7 +17,20 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
         </dependency>
     </dependencies>
 	 -->
-  
+    <repositories>
+	<repository>
+		<id>codehaus</id>
+		<url>http://repository.codehaus.org/org/codehaus</url>
+	</repository>
+  </repositories>
+ 
+  <dependencies>
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>1.8.5</version>
+	</dependency>
+  </dependencies>
    
     <build>
        
