@@ -13,8 +13,11 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/MibbleBrowser.jar" sourcepath="/home/gilberto/Documentos/librerias/mibble/mibble-2.9.3/src"/>
-	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/lib/xstream-1.4.7.jar" sourcepath="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/lib/xstream-1.4.7.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/lib/xstream-1.4.7.jar" sourcepath="/home/gilberto/workspace/mibler/lib/xstream-1.4.7/xstream-1.4.7/xstream/src/java"/>
 	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/commons-io-2.4/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/commons-io-2.4/commons-io-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/snmp4j-2.3.1/dist/snmp4j-2.3.1.jar" sourcepath="/home/gilberto/workspace/mibler/lib/snmp4j-2.3.1/src/main"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/wizardframwork/jwf-1.0.1.jar" sourcepath="/home/gilberto/workspace/mibler/lib/wizardframwork/jwf-release-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/gilberto/workspace/mibler/lib/wizardframwork/CJWizards-0.2.jar" sourcepath="/home/gilberto/Descargas/CJWizards-0.21-src"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,0 +1,6 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="winModal"  border="normal" maximizable="true" closable="true" apply="com.gdc.nms.web.mibquery.WizardContainer" width="70%" height="40%" >
+
+</window>
+</zk>

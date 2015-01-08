@@ -1,7 +1,5 @@
 package com.gdc.nms.web.mibquery;
 
-
-
 import java.io.File;
 import java.io.IOException;
 import org.codehaus.jackson.JsonGenerationException;

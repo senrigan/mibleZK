@@ -89,17 +89,17 @@ public class MenuComposer extends SelectorComposer<Component>{
     
     public void changeContainerPage(String dirPage){
 	try {
-	    Include page;
-	    Label text;
-	    text=new Label();
-	    text.setValue(dirPage);
-	    page=new Include();
-	    page.setSrc(dirPage);
-		
-		//Clients.showNotification(page.getSrc());
-		//container.getChildren().clear();
-		//container.appendChild(dirPage);
-	    container.appendChild(text);
+        	    Include page;
+        	    Label text;
+        	    text=new Label();
+        	    text.setValue(dirPage);
+        	    page=new Include();
+        	    page.setSrc(dirPage);
+        		
+        		//Clients.showNotification(page.getSrc());
+        		//container.getChildren().clear();
+        		//container.appendChild(dirPage);
+        	    container.appendChild(text);
 	    
 	}catch(Exception ex) {
 	    Clients.showNotification(Arrays.toString(ex.getStackTrace()));

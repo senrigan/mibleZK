@@ -13,14 +13,14 @@
 						<panel title=" Progress Status">
 							<panelchildren>
 								<div id="leftmidleContent"   >
-									<radiogroup >
+									
 										<vbox >
-											<radio label="Metod Configuration"/>
-											<radio label="InfoDevice"/>
-											<radio label="Configuration"/>
-											<radio label="Finish"/>
+											<checkbox label="Metod Configuration"/>
+											<checkbox label="InfoDevice"/>
+											<checkbox label="Configuration"/>
+											<checkbox label="Finish"/>
 										</vbox>
-									</radiogroup>
+									
 								</div>
 							</panelchildren>
 						</panel>
