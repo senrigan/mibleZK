@@ -51,7 +51,7 @@
 										<div >
 											
 											<button id="nextButton" label="Next" onClick="" style="float:right"/>
-											<button id="backButton" label="Back" onClick="" style="float:right"/>
+											<button id="backButton" label="Back" onClick="" style="float:right"  />
 											<button id="cancelButton" label="Cancel" onClick="" style="float:right"/>
 														
 											

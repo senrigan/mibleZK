@@ -1,0 +1,58 @@
+<!--
+    Copyright (C) 2001 Christopher Brind
+-->
+
+<project name="jwf" default="all" basedir=".">
+
+    <target name="init">
+        <property name="version" value="1.0.1"/>
+    </target>
+
+    <target name="build" depends="init,compile">
+        <jar jarfile="..\jwf-${version}.jar"
+                basedir="classes"
+                excludes="jwf/example/**" />
+    </target>
+
+    <target name="compile" depends="prepare">
+        <javac destdir="classes" srcdir="src" classpath="classes"/>
+        <copy todir="classes" >
+            <fileset dir="src" includes="**/*.properties"/>
+        </copy>
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="classes" />
+        <mkdir dir="docs\javadocs" />
+    </target>
+
+    <target name="all" depends="clean, build, docs" />
+
+    <target name="docs">
+        <javadoc sourcePath="src" destDir="docs\javadocs" packagenames="jwf.*"/>
+    </target>
+
+    <target name="example">
+        <javac destdir="classes" srcdir="example\src" classpath="classes"/>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete file="..\jwf-release-${version}.jar" />
+        <delete file="..\jwf-docs-${version}.jar" />
+        <delete file="..\jwf-${version}.jar" />
+        <delete dir="classes" />
+        <delete dir="docs\javadocs" />
+    </target>
+
+    <target name="release" depends="init,clean">
+        <zip zipfile="..\jwf-release-${version}.jar"
+            basedir="." />
+        <antcall target="build" />
+        <antcall target="docs" />
+        <zip zipfile="..\jwf-docs-${version}.jar"
+            basedir="docs"
+            includes="javadocs/**" />
+    </target>
+
+
+</project>
